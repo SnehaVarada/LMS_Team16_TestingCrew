@@ -1,0 +1,428 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 01 11:44:45 EDT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>154 seconds (154150 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to land on home page", "Home Page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at com.PageObject.LoginPage.loginValidCredential(LoginPage.java:68)
+	at com.PageObject.LoginPage.xlDataReader(LoginPage.java:85)
+	at com.StepDefinitions.LoginSD.admin_enter_valid_credentials_and_clicks_login_button_from_and(LoginSD.java:33)
+	at ✽.Admin enter valid credentials  and clicks login button from &quot;Login&quot; and 0(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:119)
+</pre></div><a href='#' onClick='toggleBox("stack-trace274827125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace274827125'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at com.PageObject.LoginPage.loginValidCredential(LoginPage.java:68)
+	at com.PageObject.LoginPage.xlDataReader(LoginPage.java:85)
+	at com.StepDefinitions.LoginSD.admin_enter_valid_credentials_and_clicks_login_button_from_and(LoginSD.java:33)
+	at ✽.Admin enter valid credentials  and clicks login button from &quot;Login&quot; and 0(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:119)
+</pre></div></td>
+<td>3</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify for broken link", "Home Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [URL is broken link.] but found [null]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.StepDefinitions.LoginSD.http_response_then_the_link_is_broken(LoginSD.java:86)
+	at ✽.HTTP response &gt;= 400. Then the link is broken(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace270313690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace270313690'><pre>java.lang.AssertionError: expected [URL is broken link.] but found [null]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.StepDefinitions.LoginSD.http_response_then_the_link_is_broken(LoginSD.java:86)
+	at ✽.HTTP response &gt;= 400. Then the link is broken(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:13)
+</pre></div></td>
+<td>30</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login button action through keyboard", "Home Page"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;username&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ebe418a5f70fdfe6a9d3d8ffde0b62c, findElement {value=//input[@id=&apos;username&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\saisn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61182/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ebe418a5f70fdfe6a9d3d8ffde0b62c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at com.PageObject.LoginPage.KeyBoardActions(LoginPage.java:200)
+	at com.StepDefinitions.LoginSD.admin_enter_valid_credentials_and_clicks_login_button_through_keyboard(LoginSD.java:217)
+	at ✽.Admin enter valid credentials  and clicks login button through keyboard(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:106)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1415835701", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1415835701'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;username&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ebe418a5f70fdfe6a9d3d8ffde0b62c, findElement {value=//input[@id=&apos;username&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\saisn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61182/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ebe418a5f70fdfe6a9d3d8ffde0b62c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at com.PageObject.LoginPage.KeyBoardActions(LoginPage.java:200)
+	at com.StepDefinitions.LoginSD.admin_enter_valid_credentials_and_clicks_login_button_through_keyboard(LoginSD.java:217)
+	at ✽.Admin enter valid credentials  and clicks login button through keyboard(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:106)
+</pre></div></td>
+<td>33</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login button action through mouse", "Home Page"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;username&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ebe418a5f70fdfe6a9d3d8ffde0b62c, findElement {value=//input[@id=&apos;username&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\saisn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61182/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ebe418a5f70fdfe6a9d3d8ffde0b62c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at com.PageObject.LoginPage.MouseActions(LoginPage.java:211)
+	at com.StepDefinitions.LoginSD.admin_enter_valid_credentials_and_clicks_login_button_through_mouse(LoginSD.java:230)
+	at ✽.Admin enter valid credentials  and clicks login button through mouse(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:112)
+</pre></div><a href='#' onClick='toggleBox("stack-trace636536295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace636536295'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;username&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ebe418a5f70fdfe6a9d3d8ffde0b62c, findElement {value=//input[@id=&apos;username&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\saisn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61182/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ebe418a5f70fdfe6a9d3d8ffde0b62c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at com.PageObject.LoginPage.MouseActions(LoginPage.java:211)
+	at com.StepDefinitions.LoginSD.admin_enter_valid_credentials_and_clicks_login_button_through_mouse(LoginSD.java:230)
+	at ✽.Admin enter valid credentials  and clicks login button through mouse(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:112)
+</pre></div></td>
+<td>33</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to land on home page with invalid URL", "Home Page"</td>
+<td><div><pre>java.lang.AssertionError: expected [404] but found [https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/login]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.StepDefinitions.LoginSD.admin_should_recieve_page_not_found_error(LoginSD.java:76)
+	at ✽.Admin should recieve 404 page not found error(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace380394805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace380394805'><pre>java.lang.AssertionError: expected [404] but found [https://lms-frontend-api-hackathon-apr-326235f3973d.herokuapp.com/login]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.StepDefinitions.LoginSD.admin_should_recieve_page_not_found_error(LoginSD.java:76)
+	at ✽.Admin should recieve 404 page not found error(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:7)
+</pre></div></td>
+<td>12</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the alignment of the login button", "Home Page"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Boolean.booleanValue()&quot; because the return value of &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; is null
+	at com.PageObject.LoginPage.LoginBtnAlignment(LoginPage.java:172)
+	at com.StepDefinitions.LoginSD.admin_should_see_login_button_on_the_centre_of_the_page(LoginSD.java:174)
+	at ✽.Admin should see login button on the centre of the page(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:72)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2065587797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2065587797'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Boolean.booleanValue()&quot; because the return value of &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; is null
+	at com.PageObject.LoginPage.LoginBtnAlignment(LoginPage.java:172)
+	at com.StepDefinitions.LoginSD.admin_should_see_login_button_on_the_centre_of_the_page(LoginSD.java:174)
+	at ✽.Admin should see login button on the centre of the page(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:72)
+</pre></div></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the alignment input field for the login", "Home Page"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;form[class = &apos;ng-dirty ng-touched ng-invalid&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ebe418a5f70fdfe6a9d3d8ffde0b62c, findElement {value=form[class = &apos;ng-dirty ng-touched ng-invalid&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\saisn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61182/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ebe418a5f70fdfe6a9d3d8ffde0b62c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.getLocation(Unknown Source)
+	at com.PageObject.LoginPage.FormDataAlignment(LoginPage.java:156)
+	at com.StepDefinitions.LoginSD.admin_should_see_input_field_on_the_centre_of_the_page(LoginSD.java:153)
+	at ✽.Admin should see input field on the centre of the page(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:78)
+</pre></div><a href='#' onClick='toggleBox("stack-trace167275971", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace167275971'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;form[class = &apos;ng-dirty ng-touched ng-invalid&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6ebe418a5f70fdfe6a9d3d8ffde0b62c, findElement {value=form[class = &apos;ng-dirty ng-touched ng-invalid&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\saisn\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61182}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61182/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ebe418a5f70fdfe6a9d3d8ffde0b62c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.getLocation(Unknown Source)
+	at com.PageObject.LoginPage.FormDataAlignment(LoginPage.java:156)
+	at com.StepDefinitions.LoginSD.admin_should_see_input_field_on_the_centre_of_the_page(LoginSD.java:153)
+	at ✽.Admin should see input field on the centre of the page(file:///C:/Users/saisn/MyNewWorkSpace/Team16_TesingCru/src/test/resources/FeaturesFile/1_Login.feature:78)
+</pre></div></td>
+<td>30</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the text spelling in the page", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify asterik next to password text", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify input descriptive test in user field", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login with invalid credentials from Excel "Login" and 1", "Home Page"</td>
+<td></td>
+<td>4</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login with invalid credentials from Excel "Login" and 3", "Home Page"</td>
+<td></td>
+<td>3</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify text on the second text field", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login with invalid credentials from Excel "Login" and 2", "Home Page"</td>
+<td></td>
+<td>3</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify text fields are present", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify text on the first text field", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify input descriptive test in password field", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify admin is able to land on home page", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify asterik next to user text", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+<tr>
+<td title='com.Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify Login is present", "Home Page"</td>
+<td></td>
+<td>0</td>
+<td>com.Runner.TestRunner@3c19aaa5</td></tr>
+</table><p>
+</body>
+</html>
